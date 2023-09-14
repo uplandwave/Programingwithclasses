@@ -4,29 +4,31 @@ class Program
 {
     static void Main(string[] args)
     {
+        string grade = "done";
         Console.WriteLine("Hello Prep2 World!");
         Console.Write("What was your score? ");
         string score = Console.ReadLine();
         int number = int.Parse(score);
-        if (number > 90)
+        if (number >= 90)
         {
-            Console.WriteLine("You got an A! You passed!");
+            grade = ("You got an A! You passed!");
         }
-        else if (number < 90 && number > 80)
+        else if (number < 90 && number >= 80)
         {
-            Console.WriteLine("You got a B. You passed!");
+            grade = ("You got a B. You passed!");
         }
-        else if (number < 80 && number > 70)
+        else if (number < 80 && number >= 70)
         {
-            Console.WriteLine("You got a C. You passed!");
+            grade = ("You got a C. You passed!");
         }
-        else if (number < 70 && number > 60)
+        else if (number < 70 && number >= 60)
         {
-            Console.WriteLine("You got a D. You did not pass");
+            grade = ("You got a D. You did not pass, maybe try studying");
         }
         else
         {
-            Console.WriteLine("You got an F. You did not pass");
+            grade = ("You got an F. You did not pass, maybe try studying");
         }
+        Console.WriteLine(grade);
     } 
 }
