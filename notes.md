@@ -84,3 +84,74 @@ Number to string
 >int number = 42;
 string textVersion = number.ToString();
 
+**Loops**
+
+string response = "yes";
+
+while (response == "yes")
+{
+    Console.Write("Do you want to continue? ");
+    response = Console.ReadLine();
+}
+
+string response;
+
+do
+{
+    Console.Write("Do you want to continue? ");
+    response = Console.ReadLine();
+} while (response == "yes");
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+
+if you are confused on the ++ it is jsut shortening the sintax for this 
+
+for (int i = 2; i <= 20; i = i + 2)
+{
+    Console.WriteLine(i);
+}
+
+foreach (string color in colors)
+{
+    Console.WriteLine(color);
+}
+
+**Getting Random numbers.**
+Random randomGenerator = new Random();
+int number = randomGenerator.Next(1, 11);
+
+**Lists**
+List<int> numbers;
+List<string> words;
+
+For adding to lists
+
+>using System.Collections.Generic;
+
+...
+
+List<string> words = new List<string>();
+
+words.Add("phone");
+words.Add("keyboard");
+words.Add("mouse");
+
+For couniting Lists
+Console.WriteLine(words.Count);
+
+Loop Through Lists 
+foreach (string word in words)
+{
+    Console.WriteLine(word);
+}
+
+Acces the list by index
+for (int i = 0; i < words.Count; i++)
+{
+    Console.WriteLine(words[i]);
+}
+
+
