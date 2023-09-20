@@ -45,4 +45,5 @@ class Program
     {
         Console.WriteLine($"{name}, the square of your number is {square}");
     }
+    //this is my new crap boys
 }
