@@ -40,4 +40,8 @@ public class Team
         
 
     }
+    public string GitTeamName()
+    {
+        return _name;
+    }
 }
