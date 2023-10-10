@@ -17,7 +17,7 @@ class Promped {
         while(true) {
             Console.WriteLine();
             Console.WriteLine("1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\n");
-            string option = Console.ReadLine();
+            string option = Console.ReadLine() ?? string.Empty;
             Console.WriteLine("|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|_|");
             int optint;
 
@@ -30,7 +30,7 @@ class Promped {
                     int promptIndex = rando.Next(0,_prompts.Count());
                     Console.WriteLine("Prompt: " + _prompts[promptIndex]);
                     Console.Write("Response: ");
-                    string response = Console.ReadLine();
+                    string response = Console.ReadLine() ?? string.Empty;
                     journal.AddEntry(_prompts[promptIndex], response);
                     break;
 
@@ -40,13 +40,13 @@ class Promped {
 
                 case 3:
                     Console.Write("Enter a filename: ");
-                    string filename = Console.ReadLine();
+                    string filename = Console.ReadLine() ?? string.Empty;
                     journal.Load(filename);
                     break;
 
                 case 4:
                     Console.Write("Enter a filename: ");
-                    filename = Console.ReadLine();
+                    filename = Console.ReadLine() ?? string.Empty;
                     journal.Save(filename);
                     break;
 
