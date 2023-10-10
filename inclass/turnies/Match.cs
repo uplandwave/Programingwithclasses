@@ -24,6 +24,8 @@ public class Match
         {
             _team1.AddLoss();
             _team2.AddWin();
+            
         }
     }
+    
 }
