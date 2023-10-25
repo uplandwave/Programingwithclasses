@@ -20,3 +20,9 @@ bookcase.CountBooks();
 
 bookcase.ShowPopularBooks(3);
 
+Loanable cat = new Loanable();
+cat.Display();
+
+Dvd d = new Dvd("LOTR");
+d.CheckOut();
+d.Display();
