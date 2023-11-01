@@ -13,6 +13,7 @@ public class Activity {
         spin();
         Console.Clear();
         Console.WriteLine($"{_name}: {_description}");
+        Console.WriteLine("========================================");
         Console.WriteLine();
         Console.WriteLine($"You picked the {_name} activity. How long do you want to do it for?");
         Console.Write("Put time in seconds Ex. 10 : ");
@@ -44,6 +45,7 @@ public class Activity {
         Thread.Sleep(1000);
         Console.Write("\b \b");
         Console.Write("0");
+        Console.Write("\b \b");
     }
     public void spin(){
         Console.Write("|");

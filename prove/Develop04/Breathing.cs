@@ -8,9 +8,11 @@ public class Breathing : Activity
         {
             base.StartBace();
             Console.WriteLine("Take a deep breath");
-            Thread.Sleep(_mathTime/2);
-            Console.WriteLine("Breath in... Breath out");
-            Thread.Sleep(_mathTime/2);
+            Console.WriteLine("Breath in...");
+            base.countDown();
+            Console.WriteLine("Breath out...");
+            base.countDown();
+            // Thread.Sleep(_mathTime/2);
             base.EndActivity();
             base.countDown();
         }

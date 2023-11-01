@@ -11,11 +11,13 @@ public class Reflection : Activity
         Console.Clear();
         int rando = new Random().Next(0, _prompts.Length);
         Console.WriteLine("Reflect on these nuts");
-        Thread.Sleep(2000);
+        base.countDown();
         Console.WriteLine(_prompts[rando]);
-        Thread.Sleep(2000);
-        Console.WriteLine(_questions[rando]);
-        Thread.Sleep(_mathTime);
+        Thread.Sleep(_mathTime/3);
+        Console.WriteLine(_questions[1]);
+        Thread.Sleep(_mathTime/3);
+        Console.WriteLine(_questions[0]);
+        Thread.Sleep(_mathTime/3);
         base.EndActivity();
         base.countDown();
 

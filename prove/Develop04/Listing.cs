@@ -9,6 +9,7 @@ public class Listing : Activity
             base.StartBace();
             int rando = new Random().Next(0, _prompts.Length);
             Console.WriteLine(_prompts[rando]);
+            base.countDown();
             
             int counter = 0;
             DateTime endTime = DateTime.Now.AddSeconds(_time);
