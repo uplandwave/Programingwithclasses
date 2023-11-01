@@ -1,7 +1,6 @@
 public class Listing : Activity
     {
-        string[] _prompts = { "Who are people that you appreciate?", "What are personal strengths of yours?",
-            "Who are people that you have helped this week?", "When have you felt the Holy Ghost this month?", "Who are some of your personal heroes?" };
+        string[] _prompts = { "Who are you grateful for?", "Do you have any strengths?", "Are you still alive?"};
 
         public Listing() : base("Listing", "Write as many entries as you want."){}
 
@@ -12,7 +11,7 @@ public class Listing : Activity
 
             int counter = 0;
                 string entrie = Console.ReadLine();
-                if (!string.IsNullOrEmpty(entrie))
+                if (!string.IsNullOrEmpty(entrie)) // I don't know if this works.
                 {
                     counter++;
                 }
