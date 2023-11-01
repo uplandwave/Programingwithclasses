@@ -12,10 +12,6 @@ public class Breathing : Activity
             Console.WriteLine("Breath in... Breath out");
             Thread.Sleep(_mathTime/2);
             base.EndActivity();
-            Thread.Sleep(5000);
+            base.countDown();
         }
-
-        // public async void CallEndAct(){
-        //     base.EndActivity();
-        // }
     }

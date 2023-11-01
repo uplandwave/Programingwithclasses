@@ -10,6 +10,8 @@ public class Activity {
     }
     public void StartBace(){
         Console.Clear();
+        spin();
+        Console.Clear();
         Console.WriteLine($"{_name}: {_description}");
         Console.WriteLine();
         Console.WriteLine($"You picked the {_name} activity. How long do you want to do it for?");
@@ -24,5 +26,48 @@ public class Activity {
         Console.WriteLine($"You did the {_name} activity for {_time} seconds!");
         Console.WriteLine();
 
+    }
+    public void countDown(){
+        Console.Write("5");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write("4");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write("3");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write("2");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write("1");
+        Thread.Sleep(1000);
+        Console.Write("\b \b");
+        Console.Write("0");
+    }
+    public void spin(){
+        Console.Write("|");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("/");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("-");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("\\");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("|");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("/");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("-");
+        Thread.Sleep(100);
+        Console.Write("\b \b");
+        Console.Write("\\");
+        Thread.Sleep(100);
     }
 }
