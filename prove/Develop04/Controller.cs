@@ -2,9 +2,11 @@ public class Controller{
     public void ShowControls(){
         while (true)
         {
-            Console.WriteLine("Welcome to your activity session");
-            Console.WriteLine("Please select an activity:");
+            Console.Clear();
+            Console.WriteLine("========================================");
+            Console.WriteLine("Mindfulness is easy, pick an activity:");
             Console.WriteLine("1. Breathing\n2. Reflection\n3. Listing\n4. Exit");
+            Console.WriteLine("========================================");
 
             string input = Console.ReadLine();
 

@@ -5,12 +5,19 @@ public class Reflection : Activity
     
     public Reflection() : base("Reflection", "This is a time for you to reflect on your life"){}
 
-    public new void StartActivity()
+    public void StartActivity()
     {
-        base.StartActivity();
+        base.StartBace();
+        Console.Clear();
         int rando = new Random().Next(0, _prompts.Length);
+        Console.WriteLine("Reflect on these nuts");
+        Thread.Sleep(1000);
         Console.WriteLine(_prompts[rando]);
+        Thread.Sleep(1000);
         Console.WriteLine(_questions[rando]);
+        Thread.Sleep(_mathTime);
         base.EndActivity();
+        Thread.Sleep(5000);
+
     }
 }

@@ -1,18 +1,21 @@
+using System.Diagnostics.Contracts;
+
 public class Breathing : Activity
     {
         public Breathing() : base("Breathing", "Focus on your breath and clam down."){}
 
-        public new async void StartActivity()
+        public void StartActivity()
         {
-            base.StartActivity();
+            base.StartBace();
             Console.WriteLine("Take a deep breath");
-            await Task.Delay(_mathTime/2);
-            // Wait wait = new Wait();
-            // wait.Pause(_mathTime/2); 
+            Thread.Sleep(_mathTime/2);
             Console.WriteLine("Breath in... Breath out");
-            await Task.Delay(_mathTime/2);
-            // wait.Pause(_mathTime); 
-            await Task.Delay(_mathTime);
+            Thread.Sleep(_mathTime/2);
             base.EndActivity();
+            Thread.Sleep(5000);
         }
+
+        // public async void CallEndAct(){
+        //     base.EndActivity();
+        // }
     }
