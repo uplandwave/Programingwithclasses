@@ -18,10 +18,12 @@
 // -------------------------------
 //     - string Activity 
 //     - string Description 
-//     - int time frame 
+//     - int userScore
 // -------------------------------
-//     + Activity compiler 
+//     + Goals compiler 
+//     + GetPoints method
 //     + Start method
+//     + showScore method
 //     + End method 
 // ===============================
 
@@ -29,20 +31,24 @@
 // ===============================
 //            Simple
 // -------------------------------
-//     - string 
-//     - 
+//     - string _goal
 // -------------------------------
-//     + Points compiler 
+//     + Simple compiler 
 //     + Start method
+//     + GetPoints method
+//     + showScore method
+//     + goalIsDone method
 // ===============================
 
 // This class wil control all the eternal goal tasks.
 // ===============================
 //             Eternal
 // -------------------------------
-//     - string 
+//     - string _goal
 // -------------------------------
-//     + Points compiler 
+//     + Eternal compiler 
+//     + GetPoints method
+//     + showScore method
 //     + Start method
 // ===============================
 
@@ -50,10 +56,13 @@
 // ===============================
 //           Checklist
 // -------------------------------
-//     - string 
+//     - string _goal
+//     - list _goals
 // -------------------------------
-//     + Display
 //     + Points compiler 
+//     + GetPoints method
+//     + saveGoals method
+//     + showScore method
 //     + Start method
 // ===============================
 
