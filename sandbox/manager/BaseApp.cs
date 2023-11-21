@@ -3,14 +3,16 @@ using System.Collections.Generic;
 
 public abstract class BaseApp
 {
+    public List<Text> passwords;
     protected UserManager userManager;
     protected User currentUser;
-    protected List<string> passwords;
+    
 
     public BaseApp(UserManager userManager)
     {
         this.userManager = userManager;
-        this.passwords = new List<string>();
+        // this.passwords = new List<string>();
+        this.passwords = new List<Text>();
     }
 
     public virtual void Run()
@@ -90,6 +92,7 @@ public abstract class BaseApp
         Console.Write("Enter the number of digits: ");
         int lang = int.Parse(Console.ReadLine());
         Console.Write("What site is this for: ");
+        string newSite = Console.ReadLine();        
 
 
         string randomPassword = GenerateRandomString(lang);
@@ -108,8 +111,10 @@ public abstract class BaseApp
         return new string(randomArray);
         }
 
-        passwords.Add(randomPassword);
+        // passwords.Add(randomPassword);        
+        AddEntry(randomPassword, newSite);
         Console.WriteLine($"Generated Password: {randomPassword}");
+        Console.WriteLine("Password Added to Vault");
     }
 
     protected virtual void ViewAllPasswords()
@@ -123,16 +128,16 @@ public abstract class BaseApp
 
     protected virtual void RemovePassword()
     {
-        Console.Write("Enter the password to remove: ");
-        string passwordToRemove = Console.ReadLine();
-        if (passwords.Contains(passwordToRemove))
-        {
-            passwords.Remove(passwordToRemove);
-            Console.WriteLine("Password removed successfully.");
-        }
-        else
-        {
-            Console.WriteLine("Password not found.");
-        }
+        // Console.Write("Enter the password to remove: ");
+        // string passwordToRemove = Console.ReadLine();
+        // if (passwords.Contains(passwordToRemove))
+        // {
+        //     passwords.Remove(passwordToRemove);
+        //     Console.WriteLine("Password removed successfully.");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("Password not found.");
+        // }
     }
 }
