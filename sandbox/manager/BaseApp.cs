@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 public abstract class BaseApp
 {
-    public List<Text> passwords;
+    public List<Text> passwords = new List<Text>();
     protected UserManager userManager;
     protected User currentUser;
     
@@ -12,7 +12,7 @@ public abstract class BaseApp
     {
         this.userManager = userManager;
         // this.passwords = new List<string>();
-        this.passwords = new List<Text>();
+        // this.passwords = new List<Text>();
     }
 
     public virtual void Run()

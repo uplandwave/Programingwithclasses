@@ -1,5 +1,5 @@
 using System;
-class Text {
+public class Text {
     public string _password;
     public string _site;
 
