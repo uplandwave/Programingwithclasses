@@ -80,11 +80,13 @@ public abstract class BaseApp
         string newPassword = Console.ReadLine();
         AddEntry(newPassword, newSite);
         Console.WriteLine("Password added successfully.");
+        Console.WriteLine($"{newPassword}{newSite}");
     }
         public void AddEntry(string newPassword, string newSite) {
         Text text = new Text();
         text._password = newPassword;
         text._site = newSite;
+        Console.WriteLine($"{newPassword}{newSite}");
         passwords.Add(text);
     }
 
