@@ -83,9 +83,9 @@ public abstract class BaseApp
         Console.WriteLine($"{newPassword}{newSite}");
     }
         public void AddEntry(string newPassword, string newSite) {
-        Text text = new Text();
-        text._password = newPassword;
-        text._site = newSite;
+        Text text = new Text(newPassword,newSite);
+        // text._password = newPassword;
+        // text._site = newSite;
         Console.WriteLine($"{newPassword}{newSite}");
         passwords.Add(text);
     }
@@ -124,7 +124,7 @@ public abstract class BaseApp
         Console.WriteLine("All Passwords:");
         foreach (var password in passwords)
         {
-            Console.WriteLine(password);
+            password.Display();
         }
     }
 
@@ -142,4 +142,5 @@ public abstract class BaseApp
         //     Console.WriteLine("Password not found.");
         // }
     }
+
 }

@@ -1,5 +1,8 @@
 public class PasswordManagerApp : BaseApp
 {
+
+    
+    
     public PasswordManagerApp(UserManager userManager) : base(userManager){
 
     }
@@ -18,13 +21,16 @@ public class PasswordManagerApp : BaseApp
             Console.WriteLine("2. Generate Random Password");
             Console.WriteLine("3. View All Passwords");
             Console.WriteLine("4. Remove Password");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Save Passwords?");
+            Console.WriteLine("6. Load Passwords?");
+            Console.WriteLine("7. Exit");
             Console.WriteLine("==============================");
             Console.Write("Choose an option: ");
 
             int choice;
             if (int.TryParse(Console.ReadLine(), out choice))
-            {
+            {   
+                Handler handler = new Handler(userManager);
                 switch (choice)
                 {
                     case 1:
@@ -40,10 +46,18 @@ public class PasswordManagerApp : BaseApp
                         RemovePassword();
                         break;
                     case 5:
+                        handler.Save();
+                        Console.WriteLine("Your passwords have been saved");
+                        break;
+                    case 6:
+                        handler.Load();
+                        Console.WriteLine("Your passwords have been loaded");
+                        break;
+                    case 7:
                         currentUser = null;
                         return;
                     default:
-                        Console.WriteLine("Invalid. you might be gay.");
+                        Console.WriteLine("Invalid. You might be gay.");
                         break;
                 }
             }
