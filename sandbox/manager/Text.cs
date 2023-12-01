@@ -1,7 +1,7 @@
 using System;
 public class Text {
-    private string _password;
-    private string _site;
+    public string _password;
+    public string _site;
 
     public Text(string password, string site)
     {

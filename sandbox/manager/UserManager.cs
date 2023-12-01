@@ -14,6 +14,8 @@ public class UserManager
         };
     }
 
+    
+    
     public User GetUser(string username)
     {
         return users.Find(u => u.Username == username);

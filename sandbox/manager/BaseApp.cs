@@ -8,6 +8,7 @@ public abstract class BaseApp
     protected User currentUser;
     
 
+
     public BaseApp(UserManager userManager)
     {
         this.userManager = userManager;
@@ -61,6 +62,7 @@ public abstract class BaseApp
         {
             Console.Clear();
             Console.WriteLine($"Welcome, {currentUser.Username}!");
+            Load();
             mainMenu();
         }
         else
@@ -86,7 +88,7 @@ public abstract class BaseApp
         Text text = new Text(newPassword,newSite);
         // text._password = newPassword;
         // text._site = newSite;
-        Console.WriteLine($"{newPassword}{newSite}");
+        // Console.WriteLine($"{newPassword}{newSite}");
         passwords.Add(text);
     }
 
@@ -121,10 +123,13 @@ public abstract class BaseApp
 
     protected virtual void ViewAllPasswords()
     {
+        Console.Clear();
         Console.WriteLine("All Passwords:");
         foreach (var password in passwords)
         {
             password.Display();
+            Console.WriteLine();
+
         }
     }
 
@@ -141,6 +146,16 @@ public abstract class BaseApp
         // {
         //     Console.WriteLine("Password not found.");
         // }
+    }
+        public void Load(){
+        StreamReader new_reader = new StreamReader($"{currentUser}.txt");
+        while (!new_reader.EndOfStream)
+        {
+            string password = new_reader.ReadLine();
+            string site = new_reader.ReadLine();    
+            Text text = new Text(password, site);
+            passwords.Add(text);
+        }
     }
 
 }

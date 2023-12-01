@@ -1,18 +1,30 @@
 class Handler : BaseApp{
-    
-    public Handler(UserManager userManager) : base(userManager){
+    List<Text> local_passwords;
+    User currentuser;
+    string line;
+    public Handler(UserManager userManager, List<Text> _local_passwords, User _currentuser) : base(userManager){
+        local_passwords = _local_passwords;
+        currentuser = _currentuser;
     }
-
+    
 
     public override void mainMenu(){
     } 
 
 
     public void Save(){
-        StreamWriter new_stream = new StreamWriter($"{currentUser}.txt");
-        foreach (var password1 in passwords){
-            new_stream.WriteLine(password1);
+        Console.WriteLine(currentuser);
+        string filename = $"{currentuser}.txt";
+        StreamWriter new_stream = new StreamWriter(filename);
+        //StreamWriter writer = new StreamWriter("test.txt");
+        foreach (Text password in local_passwords){
+            line = password._password;
+            new_stream.WriteLine(line);
+            line = password._site;
+            new_stream.WriteLine(line);
         }
+        new_stream.Close();
+        
     }
 
     public void Load(){
