@@ -43,7 +43,7 @@ public class PasswordManagerApp : BaseApp
                         ViewAllPasswords();
                         break;
                     case 4:
-                        RemovePassword();
+                        Console.WriteLine("This feature is not yet available. Please purchase the next DLC to gain access");
                         break;
                     case 5:
                         handler.Save();
@@ -64,6 +64,8 @@ public class PasswordManagerApp : BaseApp
                                 case 1:
                                     Console.WriteLine("You may not have a brain, gentlemen, but you have an idea.");
                                     nuke.TheBigOne();
+                                    nuke.LaunchSequence();
+                                    nuke.NukeDisplay();
                                 break;
                                 case 2:
                                     Console.WriteLine("Okay, someone set the terror level to Code Brown, because I need to change my pants!\n-President Hathaway");
